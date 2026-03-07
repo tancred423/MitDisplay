@@ -1,0 +1,13 @@
+{
+  "Author": "tancred423",
+  "Name": "MitDisplay",
+  "Punchline": "Real-time mitigation calculator for party buffs and enemy debuffs.",
+  "Description": "Displays total physical and magical mitigation from active party buffs on you and debuffs on your current target. Use /mit to toggle the overlay.",
+  "ApplicableVersion": "any",
+  "Tags": [
+    "mitigation",
+    "combat",
+    "overlay",
+    "tank"
+  ]
+}
