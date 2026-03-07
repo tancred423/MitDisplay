@@ -1,0 +1,28 @@
+[
+  {
+    "Author": "tancred423",
+    "Name": "MitDisplay",
+    "InternalName": "MitDisplay",
+    "Description": "Displays total physical and magical mitigation from active party buffs on you and debuffs on your current target. Use /mit to toggle the overlay.",
+    "IconUrl": "https://raw.githubusercontent.com/tancred423/MitDisplay/main/Data/glorpShield.png",
+    "ApplicableVersion": "any",
+    "DalamudApiLevel": 14,
+    "Tags": [
+      "mitigation",
+      "combat",
+      "overlay",
+      "tank"
+    ],
+    "CategoryTags": [
+      "UI",
+      "jobs"
+    ],
+    "IsTestingExclusive": false,
+    "Punchline": "Real-time mitigation calculator for party buffs and enemy debuffs.",
+    "AcceptsFeedback": true,
+    "DownloadLinkInstall": "https://github.com/tancred423/MitDisplay/releases/download/v0.0.0.1/latest.zip",
+    "AssemblyVersion": "0.0.0.1",
+    "DownloadLinkUpdate": "https://github.com/tancred423/MitDisplay/releases/download/v0.0.0.1/latest.zip",
+    "DownloadCount": 0
+  }
+]
