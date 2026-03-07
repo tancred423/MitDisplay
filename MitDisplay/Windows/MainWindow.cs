@@ -105,8 +105,8 @@ public class MainWindow : Window, IDisposable
 
         if (showParty)
         {
-            ImGui.TextDisabled("Party Mit");
-            DrawMitigationRow(physIcon, labelIconSize, "Phys", groupPhys, magIcon, "Mag", groupMag, dimmed: true);
+            ImGui.Text("Party Mit");
+            DrawMitigationRow(physIcon, labelIconSize, "Phys", groupPhys, magIcon, "Mag", groupMag);
         }
 
         if (activeEntries.Count == 0)
@@ -147,12 +147,8 @@ public class MainWindow : Window, IDisposable
 
     private static void DrawMitigationRow(
         IDalamudTextureWrap? physIcon, Vector2 iconSize, string physLabel, float physValue,
-        IDalamudTextureWrap? magIcon, string magLabel, float magValue,
-        bool dimmed = false)
+        IDalamudTextureWrap? magIcon, string magLabel, float magValue)
     {
-        if (dimmed)
-            ImGui.PushStyleColor(ImGuiCol.Text, new Vector4(0.6f, 0.6f, 0.6f, 1.0f));
-
         if (physIcon != null)
         {
             ImGui.Image(physIcon.Handle, iconSize);
@@ -178,8 +174,5 @@ public class MainWindow : Window, IDisposable
             ImGui.SameLine();
         }
         ImGui.Text($"{magValue:F2}%");
-
-        if (dimmed)
-            ImGui.PopStyleColor();
     }
 }
