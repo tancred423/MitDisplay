@@ -33,7 +33,7 @@ public static class MitigationData
         { 1951, new MitigationEntry(1951, "Tactician", 0.15f, 0.15f, MitigationSource.PartyBuff) },
 
         // --- Tank party mitigations ---
-        { 1839, new MitigationEntry(1839, "Heart of Light", 0.00f, 0.10f, MitigationSource.PartyBuff) },
+        { 1839, new MitigationEntry(1839, "Heart of Light", 0.05f, 0.10f, MitigationSource.PartyBuff) },
         { 1894, new MitigationEntry(1894, "Dark Missionary", 0.05f, 0.10f, MitigationSource.PartyBuff) },
         { 1175, new MitigationEntry(1175, "Passage of Arms", 0.15f, 0.15f, MitigationSource.PartyBuff) },
 
@@ -42,12 +42,14 @@ public static class MitigationData
         { 3003, new MitigationEntry(3003, "Holos", 0.10f, 0.10f, MitigationSource.PartyBuff) },
         { 299, new MitigationEntry(299, "Sacred Soil", 0.10f, 0.10f, MitigationSource.PartyBuff) },
         { 317, new MitigationEntry(317, "Fey Illumination", 0.00f, 0.05f, MitigationSource.PartyBuff) },
+        // seraphic illumination mag 5%
         { 2711, new MitigationEntry(2711, "Expedient", 0.10f, 0.10f, MitigationSource.PartyBuff) },
         { 1872, new MitigationEntry(1872, "Temperance", 0.10f, 0.10f, MitigationSource.PartyBuff) },
         { 849, new MitigationEntry(849, "Collective Unconscious", 0.10f, 0.10f, MitigationSource.PartyBuff) },
+        // plenary indulgence missing all type 10%
 
         // --- Caster DPS ---
-        { 3636, new MitigationEntry(3636, "Magick Barrier", 0.10f, 0.10f, MitigationSource.PartyBuff) },
+        { 3636, new MitigationEntry(3636, "Magick Barrier", 0.10f, 0.10f, MitigationSource.PartyBuff) }, // not recognized
 
         // ============================================================
         // Personal mitigations (checked on local player)
@@ -80,7 +82,7 @@ public static class MitigationData
         // --- DRK ---
         { 747, new MitigationEntry(747, "Shadow Wall", 0.30f, 0.30f, MitigationSource.PersonalBuff) },
         { 3835, new MitigationEntry(3835, "Shadowed Vigil", 0.40f, 0.40f, MitigationSource.PersonalBuff) },
-        { 746, new MitigationEntry(746, "Dark Mind", 0.00f, 0.20f, MitigationSource.PersonalBuff) },
+        { 746, new MitigationEntry(746, "Dark Mind", 0.10f, 0.20f, MitigationSource.PersonalBuff) },
         { 2682, new MitigationEntry(2682, "Oblation", 0.10f, 0.10f, MitigationSource.PersonalBuff) },
 
         // --- GNB ---
