@@ -42,14 +42,16 @@ public static class MitigationData
         { 3003, new MitigationEntry(3003, "Holos", 0.10f, 0.10f, MitigationSource.PartyBuff) },
         { 299, new MitigationEntry(299, "Sacred Soil", 0.10f, 0.10f, MitigationSource.PartyBuff) },
         { 317, new MitigationEntry(317, "Fey Illumination", 0.00f, 0.05f, MitigationSource.PartyBuff) },
-        // seraphic illumination mag 5%
+        { 1875, new MitigationEntry(1875, "Seraphic Illumination", 0.00f, 0.05f, MitigationSource.PartyBuff) },
+        { 4402, new MitigationEntry(4402, "Seraphic Illumination", 0.00f, 0.05f, MitigationSource.PartyBuff) },
         { 2711, new MitigationEntry(2711, "Expedient", 0.10f, 0.10f, MitigationSource.PartyBuff) },
         { 1872, new MitigationEntry(1872, "Temperance", 0.10f, 0.10f, MitigationSource.PartyBuff) },
         { 849, new MitigationEntry(849, "Collective Unconscious", 0.10f, 0.10f, MitigationSource.PartyBuff) },
-        // plenary indulgence missing all type 10%
+        { 1219, new MitigationEntry(1219, "Confession", 0.10f, 0.10f, MitigationSource.PartyBuff) },
 
         // --- Caster DPS ---
-        { 3636, new MitigationEntry(3636, "Magick Barrier", 0.10f, 0.10f, MitigationSource.PartyBuff) }, // not recognized
+        { 2707, new MitigationEntry(2707, "Magick Barrier", 0.10f, 0.10f, MitigationSource.PartyBuff) },
+        { 3240, new MitigationEntry(3240, "Magick Barrier", 0.10f, 0.10f, MitigationSource.PartyBuff) },
 
         // ============================================================
         // Personal mitigations (checked on local player)
