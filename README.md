@@ -1,3 +1,8 @@
+> ⚠️ **Personal Use Plugin!**
+> 
+> You are allowed to use this plugin. However, I created this for personal usage. So, I do not guarantee updates for future game versions. I will update it if I need it and that's it. If you are a developer, feel free to copy and maintain this yourself.
+> If you find a bug or want to provide an update, you can also open an issue. I am open for suggestions and help. The only rule set I have is to keep this simple. I don't want to overcomplicate this.
+
 # MitDisplay
 
 A Dalamud plugin that calculates and displays real-time mitigation from party buffs and enemy debuffs in FFXIV.

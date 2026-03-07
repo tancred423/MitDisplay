@@ -13,14 +13,17 @@ namespace MitDisplay.Windows;
 
 public class MainWindow : Window, IDisposable
 {
+    private readonly Configuration configuration;
     private readonly List<MitigationEntry> activeEntries = [];
 
     private const uint PhysicalIconId = 60011;
     private const uint MagicalIconId = 60012;
 
-    public MainWindow()
+    public MainWindow(Configuration configuration)
         : base("MitDisplay", ImGuiWindowFlags.NoScrollbar | ImGuiWindowFlags.NoScrollWithMouse)
     {
+        this.configuration = configuration;
+
         SizeConstraints = new WindowSizeConstraints
         {
             MinimumSize = new Vector2(220, 150),
@@ -61,6 +64,13 @@ public class MainWindow : Window, IDisposable
             }
         }
 
+        var showParty = configuration.ShowPartyMit;
+        var showPersonal = configuration.ShowPersonalMit;
+        var showPersonalIcons = showPersonal && configuration.ShowPersonalMitIcons;
+
+        if (!showParty && !showPersonal)
+            return;
+
         var totalPhysRemaining = 1.0f;
         var totalMagRemaining = 1.0f;
         var groupPhysRemaining = 1.0f;
@@ -87,8 +97,17 @@ public class MainWindow : Window, IDisposable
         var physIcon = Plugin.TextureProvider.GetFromGameIcon(new GameIconLookup(PhysicalIconId)).GetWrapOrDefault();
         var magIcon = Plugin.TextureProvider.GetFromGameIcon(new GameIconLookup(MagicalIconId)).GetWrapOrDefault();
 
-        DrawMitigationRow(physIcon, labelIconSize, "Phys", totalPhys, magIcon, "Mag", totalMag);
-        DrawMitigationRow(physIcon, labelIconSize, "Phys", groupPhys, magIcon, "Mag", groupMag, dimmed: true);
+        if (showPersonal)
+        {
+            ImGui.Text("Personal Mit");
+            DrawMitigationRow(physIcon, labelIconSize, "Phys", totalPhys, magIcon, "Mag", totalMag);
+        }
+
+        if (showParty)
+        {
+            ImGui.TextDisabled("Party Mit");
+            DrawMitigationRow(physIcon, labelIconSize, "Phys", groupPhys, magIcon, "Mag", groupMag, dimmed: true);
+        }
 
         if (activeEntries.Count == 0)
         {
@@ -101,9 +120,13 @@ public class MainWindow : Window, IDisposable
 
         var statusSheet = Plugin.DataManager.GetExcelSheet<Status>();
         var iconSize = new Vector2(24, 32) * ImGuiHelpers.GlobalScale;
+        var anyIconDrawn = false;
 
         foreach (var entry in activeEntries)
         {
+            if (entry.Source == MitigationSource.PersonalBuff && !showPersonalIcons)
+                continue;
+
             if (!statusSheet.TryGetRow(entry.StatusId, out var row))
                 continue;
 
@@ -114,10 +137,12 @@ public class MainWindow : Window, IDisposable
                 if (ImGui.IsItemHovered())
                     ImGui.SetTooltip($"{entry.Name}\nPhys: {entry.PhysMit * 100:F0}%  Mag: {entry.MagMit * 100:F0}%");
                 ImGui.SameLine();
+                anyIconDrawn = true;
             }
         }
 
-        ImGui.NewLine();
+        if (anyIconDrawn)
+            ImGui.NewLine();
     }
 
     private static void DrawMitigationRow(

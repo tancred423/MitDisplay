@@ -14,7 +14,7 @@ public class ConfigWindow : Window, IDisposable
         Flags = ImGuiWindowFlags.NoResize | ImGuiWindowFlags.NoCollapse | ImGuiWindowFlags.NoScrollbar |
                 ImGuiWindowFlags.NoScrollWithMouse;
 
-        Size = new Vector2(250, 70);
+        Size = new Vector2(280, 130);
         SizeCondition = ImGuiCond.Always;
 
         configuration = plugin.Configuration;
@@ -22,21 +22,31 @@ public class ConfigWindow : Window, IDisposable
 
     public void Dispose() { }
 
-    public override void PreDraw()
-    {
-        if (configuration.IsConfigWindowMovable)
-            Flags &= ~ImGuiWindowFlags.NoMove;
-        else
-            Flags |= ImGuiWindowFlags.NoMove;
-    }
-
     public override void Draw()
     {
-        var movable = configuration.IsConfigWindowMovable;
-        if (ImGui.Checkbox("Movable Config Window", ref movable))
+        var showPartyMit = configuration.ShowPartyMit;
+        if (ImGui.Checkbox("Show Party Mit", ref showPartyMit))
         {
-            configuration.IsConfigWindowMovable = movable;
+            configuration.ShowPartyMit = showPartyMit;
             configuration.Save();
         }
+
+        var showPersonalMit = configuration.ShowPersonalMit;
+        if (ImGui.Checkbox("Show Personal Mit", ref showPersonalMit))
+        {
+            configuration.ShowPersonalMit = showPersonalMit;
+            configuration.Save();
+        }
+
+        ImGui.Indent();
+        ImGui.BeginDisabled(!showPersonalMit);
+        var showPersonalMitIcons = configuration.ShowPersonalMitIcons;
+        if (ImGui.Checkbox("Show Personal Mitigation Icons", ref showPersonalMitIcons))
+        {
+            configuration.ShowPersonalMitIcons = showPersonalMitIcons;
+            configuration.Save();
+        }
+        ImGui.EndDisabled();
+        ImGui.Unindent();
     }
 }

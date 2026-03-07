@@ -3,6 +3,7 @@
   "Name": "MitDisplay",
   "Punchline": "Real-time mitigation calculator for party buffs and enemy debuffs.",
   "Description": "Displays total physical and magical mitigation from active party buffs on you and debuffs on your current target. Use /mit to toggle the overlay.",
+  "IconUrl": "https://raw.githubusercontent.com/tancred423/MitDisplay/tree/1-initial-setup/Data/glorpShield.png",
   "ApplicableVersion": "any",
   "Tags": [
     "mitigation",
