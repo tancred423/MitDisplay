@@ -35,7 +35,7 @@ public class MainWindow : Window, IDisposable
 
     public override void Draw()
     {
-        var localPlayer = Plugin.ClientState.LocalPlayer;
+        var localPlayer = Plugin.ObjectTable.LocalPlayer;
         if (localPlayer == null)
         {
             ImGui.Text("Not logged in.");
