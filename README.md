@@ -8,6 +8,8 @@
 
 A Dalamud plugin that calculates and displays real-time mitigation from party buffs, personal buffs and enemy debuffs in FFXIV.
 
+<img width="240" height="231" alt="2026_03_07_8K6eMjxaJw" src="https://github.com/user-attachments/assets/3e7ddfd9-fbc1-4147-8a21-9c776da5c25a" />
+
 It computes total damage reduction using multiplicative stacking and displays four numbers:
 
 | | Physical | Magical |
