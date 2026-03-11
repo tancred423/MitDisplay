@@ -35,7 +35,7 @@ public static class MitigationData
         // --- Tank party mitigations ---
         { 1839, new MitigationEntry(1839, "Heart of Light", 0.05f, 0.10f, MitigationSource.PartyBuff) },
         { 1894, new MitigationEntry(1894, "Dark Missionary", 0.05f, 0.10f, MitigationSource.PartyBuff) },
-        { 1175, new MitigationEntry(1175, "Passage of Arms", 0.15f, 0.15f, MitigationSource.PartyBuff) },
+        { 1176, new MitigationEntry(1176, "Arms Up", 0.15f, 0.15f, MitigationSource.PartyBuff) },
 
         // --- Healer party mitigations ---
         { 2618, new MitigationEntry(2618, "Kerachole", 0.10f, 0.10f, MitigationSource.PartyBuff) },
