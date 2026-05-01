@@ -21,7 +21,7 @@
     "Punchline": "Real-time mitigation calculator for party buffs and enemy debuffs.",
     "AcceptsFeedback": true,
     "DownloadLinkInstall": "https://github.com/tancred423/MitDisplay/releases/download/v0.0.0.5/latest.zip",
-    "AssemblyVersion": "0.0.0.4",
+    "AssemblyVersion": "0.0.0.5",
     "DownloadLinkUpdate": "https://github.com/tancred423/MitDisplay/releases/download/v0.0.0.5/latest.zip",
     "DownloadCount": 0
   }
