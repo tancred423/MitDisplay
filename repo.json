@@ -6,7 +6,7 @@
     "Description": "Displays total physical and magical mitigation from active party buffs on you and debuffs on your current target. Use /mit to toggle the overlay.",
     "IconUrl": "https://raw.githubusercontent.com/tancred423/MitDisplay/master/Data/glorpShield.png",
     "ApplicableVersion": "any",
-    "DalamudApiLevel": 14,
+    "DalamudApiLevel": 15,
     "Tags": [
       "mitigation",
       "combat",
