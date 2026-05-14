@@ -1,3 +1,7 @@
+> **Archived**
+>
+> Moved to https://gitlab.com/tancred/mit-display
+
 > ⚠️ **Personal Use Plugin!**
 > 
 > You are allowed to use this plugin. However, I created this for personal usage. So, I do not guarantee updates for future game versions. I will update it if I need it and that's it. If you are a developer, feel free to copy and maintain this yourself.
